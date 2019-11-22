@@ -27,15 +27,21 @@ Riot Games organised a quick hackathon like event to test out their API for thei
 The legends of runettera client broadcasts all of its client data to "http://localhost:21337". Since my plan was to create a website that collects as much information as possible (https://github.com/sjuery/lorOverseer), I needed to send all of this data to my website. This is where LoRDataGatherer comes in. Whenever a player finishes a game, it collects all the required information and sends it for processing to the website (https://loroverseer.herokuapp.com/).
 
 Here is all the information that can be gathered from the API (More info on the official website https://developer.riotgames.com/docs/lor#game-client-api):
+
 http://localhost:21337/static-decklist:
+
 - DeckCode (a string telling us what deck the host is currently playing )
 - CardsInDeck(a dictionary with every card in above mentioned deck)
-http://localhost:21337/positional-rectangles
+
+http://localhost:21337/positional-rectangles:
+
 - PlayerName (a string with the Username of the host)
 - OpponentName (a string with the Username of his opponent)
 - Screen (a dictionary with the width and height of the players screen)
 - rectangles (an array of dictionaries with information such as what card is on what screen coordinate)
-http://localhost:21337/expeditions-state
+
+http://localhost:21337/expeditions-state:
+
 - IsActive (bool telling us if the player has an active expedition)
 - State (string that returns what the player is doing with the expedition)
 - Record (array of strings[Either win, or loss] indicating in what order the host won/lost their games)
@@ -43,7 +49,9 @@ http://localhost:21337/expeditions-state
 - Games (integer with the total amount of games)
 - Wins (integer with the amount of wins)
 - Losses (integer with the amount of losses)
-http://localhost:21337/game-result
+
+http://localhost:21337/game-result:
+
 - GameID (an integer with the ID of the game [resets everytime the client restarts])
 - LocalPlayerWon (a boolean indicating if the host won or lost the match)
 
