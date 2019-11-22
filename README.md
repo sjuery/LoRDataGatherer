@@ -64,6 +64,7 @@ Once the app knows the player is in an active game, it sets all of the data that
 - Regions
 - Screen Size
 - Expedition wins,losses,total games...
+
 And once that is done, it adds every rectangle information found in the positional-rectangles part of the API to a dictionary (Does this every 5 seconds if the rectangles have changed position)
 
 Once the DeckCode finally returns null again, all of the information collected gets sent to my website using a post request. And the app begins searching for its next available game. 
@@ -73,6 +74,7 @@ The python version of the project has the following dependencies:
 - JSON
 - Requests
 - lor_deckcodes
+
 All of which can be installed using pip
 
 I have however also included a rar with an executable that will be able to run without the need of Python or any of the above dependencies.
